@@ -123,12 +123,9 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, index){
-  for (let i = 0; i < array.length; i++){
     return array[index];
-  }
-  return array;
 }
-console.log('task 5', getFlavorByIndex(originalFlavors, 2));
+// console.log('task 5', getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -145,10 +142,15 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavor){
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === flavor){
+       array.splice(i, 1);
+    }
+  }
+  return array;
 }
-
+console.log('task 6', removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
